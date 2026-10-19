@@ -1,9 +1,13 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
-        <item name="colorPrimary">@color/primary</item>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/neon_yellow</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
-        <item name="colorAccent">@color/accent</item>
+        <item name="colorAccent">@color/neon_yellow</item>
+        <item name="colorSecondary">@color/neon_cyan</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="android:colorBackground">@color/window_background</item>
         <item name="android:textColorPrimary">@color/text_color_primary</item>
         <item name="android:textColorSecondary">@color/text_color_secondary</item>
         <item name="android:textColorPrimaryInverse">@color/text_primary_inverse</item>
@@ -11,15 +15,17 @@
         <item name="android:windowBackground">@color/window_background</item>
         <item name="android:listDivider">@color/divider</item>
 
-        <item name="actionBarTheme">@style/ActionBarTheme</item>
+        <item name="actionBarTheme">@style/ToolbarTheme</item>
         <item name="actionModeStyle">@style/ActionModeTheme</item>
         <item name="actionBarPopupTheme">@style/ActionBarPopupTheme</item>
 
         <item name="windowActionModeOverlay">true</item>
 
-        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/window_background</item>
+        <item name="android:statusBarColor">@color/toolbar_background</item>
+        <item name="android:windowLightStatusBar">false</item>
 
-        <!-- MaterialDrawer specific values -->
+        <!-- MaterialDrawer -->
         <item name="material_drawer_background">@color/drawer_background</item>
         <item name="material_drawer_primary_text">@color/drawer_primary_text</item>
         <item name="material_drawer_primary_icon">@color/drawer_primary_icon</item>
@@ -29,61 +35,115 @@
         <item name="material_drawer_selected">@color/drawer_selected</item>
         <item name="material_drawer_selected_text">@color/drawer_selected_text</item>
         <item name="material_drawer_header_selection_text">@color/drawer_header_selection_text</item>
+
+        <!-- NeoPop: SHARP edges everywhere — 0dp corners -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeNeoPop</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeNeoPop</item>
     </style>
 
-    <style name="AppTheme.NoActionBar" parent="AppTheme">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="ShapeNeoPop" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">0dp</item>
     </style>
-    
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme" />
+
     <style name="AppTheme.Starting" parent="Theme.SplashScreen">
         <item name="android:windowBackground">@drawable/splash_background</item>
         <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
     </style>
 
-    <style name="ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <!-- Toolbar: white text/icons on pure black -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">#8F8F8F</item>
         <item name="popupTheme">@style/ActionBarPopupTheme</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <style name="ActionBarPopupTheme" parent="Theme.AppCompat.DayNight">
-        <item name="android:popupBackground">@android:color/holo_red_dark</item>
+    <style name="ActionBarTheme" parent="@style/ToolbarTheme" />
+
+    <style name="ActionBarPopupTheme" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:colorBackground">@color/surface</item>
     </style>
 
-    <style name="ActionModeTheme" parent="@style/ActionBarTheme">
-        <item name="background">?attr/colorPrimary</item>
+    <style name="ActionModeTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="background">@color/neon_yellow</item>
         <item name="height">?attr/actionBarSize</item>
     </style>
 
     <style name="ActionBarTitleAppearance">
-        <item name="android:textSize">@dimen/actionbar_title_text_size</item>
-        <item name="android:textColor">@color/text_primary_inverse</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
     </style>
 
     <style name="ActionBarSubTitleAppearance" parent="ActionBarTitleAppearance">
-        <item name="android:textSize">@dimen/actionbar_subtitle_text_size</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#8F8F8F</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.02</item>
     </style>
 
     <style name="InfoPageFirstColumnStyle">
-        <item name="android:textSize">@dimen/tr_abc_text_size_body_1_material</item>
-        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#8F8F8F</item>
         <item name="android:layout_marginLeft">@dimen/default_text_margin</item>
         <item name="android:layout_marginRight">@dimen/default_text_margin</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.04</item>
     </style>
 
     <style name="InfoPageSecondColumnStyle">
-        <item name="android:textSize">@dimen/tr_abc_text_size_body_1_material</item>
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
     <style name="InfoPageTitleStyle">
-        <item name="android:textSize">@dimen/tr_abc_text_size_subhead_material</item>
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/neon_yellow</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
     </style>
 
     <style name="FabMenuLabelsStyle">
         <item name="android:background">@drawable/fab_title_background</item>
-        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textColor">@color/neon_yellow</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="Widget.App.Button.Outlined" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/neopop_button_outline</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+    <style name="Widget.App.Button.Filled" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/neopop_button_filled</item>
+        <item name="android:textColor">@color/text_primary_inverse</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
     </style>
 </resources>

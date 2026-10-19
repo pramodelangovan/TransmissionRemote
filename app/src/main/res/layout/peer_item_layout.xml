@@ -88,7 +88,7 @@
                 android:paddingTop="@dimen/default_padding_small"
                 android:paddingBottom="@dimen/default_padding_small"
                 android:src="@drawable/ic_arrow_upward"
-                app:tint="@color/md_red_700" />
+                app:tint="@color/status_error" />
         </LinearLayout>
     </LinearLayout>
 </layout>

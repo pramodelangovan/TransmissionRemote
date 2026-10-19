@@ -1,29 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#1c2837</color>
-    <color name="primary_dark">#161f29</color>
-    <color name="accent">#1d88e3</color>
-    <color name="text_primary">#f2f2f2</color>
-    <color name="text_primary_disabled">#727272</color>
-    <color name="text_secondary">#71828f</color>
-    <color name="text_secondary_disabled">#727272</color>
-    <color name="text_primary_inverse">#f2f2f2</color>
-    <color name="divider">#040404</color>
-    <color name="window_background">#161f29</color>
+    <!-- NeoPop Dark — same as light, NeoPop is always dark -->
+    <color name="primary">#000000</color>
+    <color name="primary_dark">#000000</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_primary_disabled">#55FFFFFF</color>
+    <color name="text_secondary">#8F8F8F</color>
+    <color name="text_secondary_disabled">#55888888</color>
+    <color name="text_primary_inverse">#000000</color>
+    <color name="divider">#1A1A1A</color>
+    <color name="window_background">#000000</color>
+
+    <!-- Surface colors -->
+    <color name="surface">#0D0D0D</color>
+    <color name="surface_variant">#141414</color>
+    <color name="card_background">#0D0D0D</color>
+    <color name="toolbar_background">#000000</color>
+
+    <!-- Gradient colors -->
+    <color name="gradient_start">#000000</color>
+    <color name="gradient_end">#000000</color>
+    <color name="gradient_bottom_start">#0D0D0D</color>
+    <color name="gradient_bottom_end">#0D0D0D</color>
+
+    <!-- NeoPop neon palette -->
+    <color name="neon_yellow">#2EA8FF</color>
+    <color name="neon_cyan">#2EA8FF</color>
+    <color name="neon_white">#FFFFFF</color>
+    <color name="neon_red">#FF4D5E</color>
+    <color name="neon_green">#3DFFB5</color>
+    <color name="neon_orange">#3DFFB5</color>
+
+    <!-- 3D shadow edge colors -->
+    <color name="shadow_edge_bottom">#333333</color>
+    <color name="shadow_edge_right">#1F1F1F</color>
+    <color name="card_stroke">#2A2A2A</color>
+    <color name="alternative_accent">#2EA8FF</color>
+    <color name="fab_title_background_color">#E6000000</color>
+
+    <!-- Torrent list -->
+    <color name="torrent_list_progressbar_background">#1A1A1A</color>
+    <color name="torrent_list_progressbar_progress_color">#2EA8FF</color>
+    <color name="torrent_list_progressbar_progress_finished_color">#3DFFB5</color>
+    <color name="torrent_list_progressbar_progress_disabled_color">#333333</color>
+    <color name="torrent_list_progressbar_progress_rechecking_color">#2EA8FF</color>
+    <color name="torrent_list_selected_overlay">#222EA8FF</color>
 
                     <!-- Material Drawer -->
-    <color name="drawer_background">#161f29</color>
-    <color name="drawer_primary_text">@color/material_drawer_dark_primary_text</color>
-    <color name="drawer_primary_icon">@color/material_drawer_dark_primary_icon</color>
-    <color name="drawer_secondary_text">@color/material_drawer_dark_secondary_text</color>
-    <color name="drawer_hint_text">@color/material_drawer_dark_hint_text</color>
-    <color name="drawer_divider">@color/material_drawer_dark_divider</color>
-    <color name="drawer_selected">#0a0e13</color>
-    <color name="drawer_selected_text">@color/text_primary</color>
+    <color name="drawer_background">#000000</color>
+    <color name="drawer_primary_text">#FFFFFF</color>
+    <color name="drawer_primary_icon">#8F8F8F</color>
+    <color name="drawer_secondary_text">#8F8F8F</color>
+    <color name="drawer_hint_text">#666666</color>
+    <color name="drawer_divider">#1A1A1A</color>
+    <color name="drawer_selected">#141414</color>
+    <color name="drawer_selected_text">#2EA8FF</color>
     <color name="drawer_header_selection_text">@color/material_drawer_dark_header_selection_text</color>
-    <color name="drawer_header_circle_background">#bbbbbb</color>
-    <color name="drawer_header_circle_foreground">#444444</color>
+    <color name="drawer_header_circle_background">#1A1A1A</color>
+    <color name="drawer_header_circle_foreground">#2EA8FF</color>
 
                     <!-- FAB -->
-    <color name="fab_overlay_color">#DD1c2837</color>
+    <color name="fab_overlay_color">#DD000000</color>
+
+    <!-- Status colors -->
+    <color name="status_downloading">#2EA8FF</color>
+    <color name="status_seeding">#3DFFB5</color>
+    <color name="status_paused">#555555</color>
+    <color name="status_error">#FF4D5E</color>
+
+    <!-- Speed indicator colors -->
+    <color name="speed_download">#2EA8FF</color>
+    <color name="speed_upload">#3DFFB5</color>
 </resources>

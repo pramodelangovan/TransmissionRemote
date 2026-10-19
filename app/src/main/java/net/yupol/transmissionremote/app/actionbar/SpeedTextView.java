@@ -14,6 +14,7 @@ import com.google.common.base.Strings;
 
 import net.yupol.transmissionremote.app.R;
 import net.yupol.transmissionremote.app.utils.CheatSheet;
+import net.yupol.transmissionremote.app.utils.ColorUtils;
 import net.yupol.transmissionremote.app.utils.MetricsUtils;
 import net.yupol.transmissionremote.app.utils.TextUtils;
 
@@ -27,7 +28,7 @@ public abstract class SpeedTextView extends AppCompatTextView {
         setPadding(horPadding, 0, horPadding, 0);
 
         setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.speed_text_size));
-        setTextColor(context.getResources().getColor(R.color.text_primary_inverse));
+        setTextColor(ColorUtils.resolveColor(context, android.R.attr.textColorPrimary, R.color.text_primary));
         setTypeface(null, Typeface.BOLD);
 
         setSpeed(0);

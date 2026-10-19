@@ -1,20 +1,28 @@
 package net.yupol.transmissionremote.app.preferences;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.MenuItem;
+import androidx.appcompat.widget.Toolbar;
+
+import net.yupol.transmissionremote.app.R;
 
 public class AdvancedPreferencesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.preferences_activity_layout);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitle(getTitle());
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(android.R.id.content, new AdvancedPreferencesFragment())
+                .replace(R.id.fragment_container, new AdvancedPreferencesFragment())
                 .commit();
 
         ActionBar actionBar = getSupportActionBar();

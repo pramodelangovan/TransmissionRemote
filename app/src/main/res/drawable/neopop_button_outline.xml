@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NeoPop 3D outline button — white border with dark bottom/right edge -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bottom shadow edge (3D depth) -->
+    <item android:top="4dp" android:left="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/shadow_edge_bottom"/>
+            <corners android:radius="0dp"/>
+        </shape>
+    </item>
+    <!-- Main button face -->
+    <item android:bottom="4dp" android:right="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/surface"/>
+            <stroke android:width="2dp" android:color="@android:color/white"/>
+            <corners android:radius="0dp"/>
+        </shape>
+    </item>
+</layer-list>
+

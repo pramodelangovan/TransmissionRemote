@@ -5,50 +5,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/focusable_background">
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <!-- NeoPop 3D card with sharp edges -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="@dimen/tr_abc_list_item_padding_horizontal_material"
-        android:paddingRight="@dimen/tr_abc_list_item_padding_horizontal_material"
-        android:paddingTop="@dimen/torrent_list_vertical_padding"
-        android:paddingBottom="@dimen/torrent_list_vertical_padding"
-        android:descendantFocusability="blocksDescendants"
-        android:background="?android:attr/selectableItemBackground">
+        android:padding="16dp"
+        android:background="@drawable/card_background"
+        android:elevation="0dp"
+        android:descendantFocusability="blocksDescendants">
 
         <net.yupol.transmissionremote.app.torrentlist.PlayPauseButton
             android:id="@+id/pause_resume_button"
-            android:layout_width="@dimen/torrent_list_start_button_size"
-            android:layout_height="@dimen/torrent_list_start_button_size"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="center_vertical"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            app:background_color="?android:attr/windowBackground"
-            app:border_color="?android:attr/textColorPrimary"/>
+            app:background_color="@color/card_background"
+            app:foreground_color="@android:color/white"
+            app:border_color="@android:color/white"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/torrent_list_start_button_padding"
+            android:paddingLeft="14dp"
             android:orientation="vertical"
             android:clickable="false">
 
             <TextView android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/tr_abc_text_size_subhead_material"
+                android:textSize="15sp"
                 android:maxLines="2"
-                android:textColor="?android:textColorPrimary"/>
+                android:fontFamily="sans-serif-bold"
+                android:textColor="@android:color/white"
+                android:letterSpacing="0.02"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
                 <TextView android:id="@+id/downloaded_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/tr_abc_text_size_caption_material"
-                    android:textColor="?android:textColorSecondary"/>
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#8F8F8F"/>
                 <ImageView android:id="@+id/download_icon"
                     android:layout_width="@dimen/torrent_list_down_up_icon_size"
                     android:layout_height="wrap_content"
@@ -57,7 +65,7 @@
                     android:layout_alignTop="@id/downloaded_text"
                     android:layout_alignBottom="@id/downloaded_text"
                     android:src="@drawable/ic_download"
-                    app:tint="@color/md_green_700"
+                    app:tint="@color/neon_cyan"
                     tools:ignore="MissingPrefix" />
                 <TextView android:id="@+id/download_rate"
                     android:layout_width="wrap_content"
@@ -65,18 +73,21 @@
                     android:layout_toLeftOf="@id/download_icon"
                     android:gravity="end"
                     android:layout_marginRight="@dimen/default_text_margin"
-                    android:textSize="@dimen/tr_abc_text_size_caption_material"
-                    android:textColor="?android:textColorSecondary"/>
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
                 <TextView android:id="@+id/uploaded_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/tr_abc_text_size_caption_material"
-                    android:textColor="?android:textColorSecondary"/>
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#8F8F8F"/>
                 <ImageView android:id="@+id/upload_icon"
                     android:layout_width="@dimen/torrent_list_down_up_icon_size"
                     android:layout_height="wrap_content"
@@ -85,7 +96,7 @@
                     android:layout_alignTop="@id/uploaded_text"
                     android:layout_alignBottom="@id/uploaded_text"
                     android:src="@drawable/ic_upload"
-                    app:tint="@color/md_red_700"
+                    app:tint="@color/neon_orange"
                     tools:ignore="MissingPrefix" />
                 <TextView android:id="@+id/upload_rate"
                     android:layout_width="wrap_content"
@@ -93,15 +104,17 @@
                     android:layout_toLeftOf="@id/upload_icon"
                     android:gravity="end"
                     android:layout_marginRight="@dimen/default_text_margin"
-                    android:textSize="@dimen/tr_abc_text_size_caption_material"
-                    android:textColor="?android:textColorSecondary"/>
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@android:color/white"/>
             </RelativeLayout>
 
+            <!-- Thick sharp progress bar -->
             <ProgressBar android:id="@+id/progress_bar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/torrent_list_progressbar_height"
-                android:layout_marginTop="@dimen/default_text_margin_small"
-                android:layout_marginBottom="@dimen/default_text_margin_small"
+                android:layout_height="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
                 style="@android:style/Widget.Holo.ProgressBar.Horizontal"/>
 
             <RelativeLayout
@@ -112,8 +125,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:textSize="@dimen/tr_abc_text_size_caption_material"
-                    android:textColor="?android:textColorSecondary"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/neon_yellow"
                     android:text="99.9%"/>
 
                 <TextView android:id="@+id/remaining_time_text"
@@ -121,23 +135,28 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:textSize="@dimen/tr_abc_text_size_caption_material"
-                    android:textColor="?android:textColorSecondary"
+                    android:textSize="11sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#8F8F8F"
                     android:text="9h 23m 59s"/>
             </RelativeLayout>
 
             <TextView android:id="@+id/error_message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
                 android:drawablePadding="@dimen/default_padding_small"
                 android:textSize="@dimen/abc_text_size_caption_material"
-                android:textColor="?android:textColorSecondary"/>
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/neon_red"/>
 
         </LinearLayout>
     </LinearLayout>
-    <View android:id="@+id/selected_overlay"
+
+    <View
+        android:id="@+id/selected_overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/torrent_list_selected_overlay"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 </FrameLayout>

@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-    <FrameLayout android:id="@+id/server_preferences_fragment_container"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top" />
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/toolbar_background"
+        android:elevation="0dp"
+        custom:titleTextAppearance="@style/ActionBarTitleAppearance"
+        custom:subtitleTextAppearance="@style/ActionBarSubTitleAppearance"
+        android:theme="@style/ToolbarTheme" />
 
-    <FrameLayout android:id="@+id/progress_bar_fragment_container"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="2dp"
+        android:background="@color/neon_yellow" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <FrameLayout android:id="@+id/server_preferences_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top" />
+
+        <FrameLayout android:id="@+id/progress_bar_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
 
 </LinearLayout>

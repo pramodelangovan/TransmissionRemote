@@ -72,14 +72,17 @@ public class DirectoryAdapter extends RecyclerView.Adapter<DirectoryAdapter.View
         @DrawableRes int iconRes = 0;
         long bytesCompleted = 0;
         long filesLength = 0;
+        boolean isItemSelected = false;
         switch (viewType) {
             case R.id.view_type_directory:
                 Dir dir = getDir(position);
                 holder.binding.setDir(dir);
 
                 boolean isDirectoryCompleted = isDirectoryCompleted(dir);
-                holder.binding.checkbox.setState(isDirectoryChecked(dir));
+                Boolean isDirectoryChecked = isDirectoryChecked(dir);
+                holder.binding.checkbox.setState(isDirectoryChecked);
                 holder.binding.checkbox.setEnabled(!isDirectoryCompleted);
+                isItemSelected = Boolean.TRUE.equals(isDirectoryChecked);
 
                 Set<Integer> priorities = dirPriorities(dir);
                 holder.binding.priorityLow.setVisibility(
@@ -108,8 +111,10 @@ public class DirectoryAdapter extends RecyclerView.Adapter<DirectoryAdapter.View
                 holder.binding.setFile(file);
 
                 boolean isFileCompleted = isFileCompleted(position);
-                holder.binding.checkbox.setChecked(isFileChecked(position));
+                boolean isFileChecked = isFileChecked(position);
+                holder.binding.checkbox.setChecked(isFileChecked);
                 holder.binding.checkbox.setEnabled(!isFileCompleted);
+                isItemSelected = isFileChecked;
 
                 Priority priority = filePriority(position);
                 holder.binding.priorityLow.setVisibility(priority == Priority.LOW ? View.VISIBLE : View.GONE);
@@ -134,6 +139,8 @@ public class DirectoryAdapter extends RecyclerView.Adapter<DirectoryAdapter.View
         holder.binding.statsText.setText(stats);
 
         holder.binding.icon.setImageResource(iconRes);
+        holder.binding.rootLayout.setActivated(isItemSelected);
+        holder.binding.rootLayout.setSelected(isItemSelected);
         holder.binding.executePendingBindings();
     }
 

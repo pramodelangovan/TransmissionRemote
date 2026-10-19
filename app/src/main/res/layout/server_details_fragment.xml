@@ -1,21 +1,24 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/window_background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="top"
-        android:padding="@dimen/default_padding_big">
+        android:padding="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/default_text_margin"
             android:text="@string/server_parameters"
             android:textStyle="bold"
-            android:textSize="@dimen/tr_abc_text_size_title_material" />
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/tr_abc_text_size_title_material"
+            android:letterSpacing="0.02"/>
 
         <include layout="@layout/separator" />
 

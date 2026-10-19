@@ -1,40 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primary">#607D8B</color>
-    <color name="primary_dark">#455A64</color>
-    <color name="accent">#FF5252</color>
-    <color name="alternative_accent">#ff8a80</color>
-    <color name="text_primary">#212121</color>
-    <color name="text_primary_disabled">#80000000</color>
-    <color name="text_secondary">#727272</color>
-    <color name="text_secondary_disabled">#80323232</color>
-    <color name="text_primary_inverse">@android:color/white</color>
-    <color name="divider">#B6B6B6</color>
-    <color name="window_background">@android:color/white</color>
+    <!-- NeoPop Light — pure black + neon accents -->
+    <color name="primary">#000000</color>
+    <color name="primary_dark">#000000</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="alternative_accent">#2EA8FF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_primary_disabled">#55FFFFFF</color>
+    <color name="text_secondary">#8F8F8F</color>
+    <color name="text_secondary_disabled">#55888888</color>
+    <color name="text_primary_inverse">#000000</color>
+    <color name="divider">#1A1A1A</color>
+    <color name="window_background">#000000</color>
+
+    <!-- Surface colors -->
+    <color name="surface">#0D0D0D</color>
+    <color name="surface_variant">#141414</color>
+    <color name="card_background">#0D0D0D</color>
+    <color name="toolbar_background">#000000</color>
+
+    <!-- Gradient colors (flat for NeoPop) -->
+    <color name="gradient_start">#000000</color>
+    <color name="gradient_end">#000000</color>
+    <color name="gradient_bottom_start">#0D0D0D</color>
+    <color name="gradient_bottom_end">#0D0D0D</color>
+
+    <!-- NeoPop neon palette -->
+    <color name="neon_yellow">#2EA8FF</color>
+    <color name="neon_cyan">#2EA8FF</color>
+    <color name="neon_white">#FFFFFF</color>
+    <color name="neon_red">#FF4D5E</color>
+    <color name="neon_green">#3DFFB5</color>
+    <color name="neon_orange">#3DFFB5</color>
+
+    <!-- 3D shadow edge colors -->
+    <color name="shadow_edge_bottom">#333333</color>
+    <color name="shadow_edge_right">#1F1F1F</color>
+    <color name="card_stroke">#2A2A2A</color>
 
                     <!-- Torrent list -->
-    <color name="torrent_list_progressbar_background">#ffb9b9b9</color>
-    <color name="torrent_list_progressbar_progress_color">@color/md_light_blue_A700</color>
-    <color name="torrent_list_progressbar_progress_finished_color">@color/md_green_600</color>
-    <color name="torrent_list_progressbar_progress_disabled_color">#ff737373</color>
-    <color name="torrent_list_progressbar_progress_rechecking_color">@color/md_yellow_800</color>
-    <color name="torrent_list_selected_overlay">#88646464</color>
+    <color name="torrent_list_progressbar_background">#1A1A1A</color>
+    <color name="torrent_list_progressbar_progress_color">#2EA8FF</color>
+    <color name="torrent_list_progressbar_progress_finished_color">#3DFFB5</color>
+    <color name="torrent_list_progressbar_progress_disabled_color">#333333</color>
+    <color name="torrent_list_progressbar_progress_rechecking_color">#2EA8FF</color>
+    <color name="torrent_list_selected_overlay">#222EA8FF</color>
 
                     <!-- Material Drawer -->
-    <color name="drawer_background">@color/material_drawer_background</color>
-    <color name="drawer_primary_text">@color/material_drawer_primary_text</color>
-    <color name="drawer_primary_icon">@color/material_drawer_primary_icon</color>
-    <color name="drawer_secondary_text">@color/material_drawer_secondary_text</color>
-    <color name="drawer_hint_text">@color/material_drawer_hint_text</color>
-    <color name="drawer_divider">@color/material_drawer_divider</color>
-    <color name="drawer_selected">@color/material_drawer_selected</color>
-    <color name="drawer_selected_text">@color/material_drawer_selected_text</color>
+    <color name="drawer_background">#000000</color>
+    <color name="drawer_primary_text">#FFFFFF</color>
+    <color name="drawer_primary_icon">#8F8F8F</color>
+    <color name="drawer_secondary_text">#8F8F8F</color>
+    <color name="drawer_hint_text">#666666</color>
+    <color name="drawer_divider">#1A1A1A</color>
+    <color name="drawer_selected">#141414</color>
+    <color name="drawer_selected_text">#2EA8FF</color>
     <color name="drawer_header_selection_text">@color/material_drawer_header_selection_text</color>
-    <color name="drawer_header_circle_background">@android:color/white</color>
-    <color name="drawer_header_circle_foreground">@color/text_secondary</color>
+    <color name="drawer_header_circle_background">#1A1A1A</color>
+    <color name="drawer_header_circle_foreground">#2EA8FF</color>
 
                     <!-- FAB -->
-    <color name="fab_title_background_color">#eb646464</color>
-    <color name="fab_overlay_color">#CCFFFFFF</color>
+    <color name="fab_title_background_color">#E6000000</color>
+    <color name="fab_overlay_color">#DD000000</color>
+
+    <!-- Status colors -->
+    <color name="status_downloading">#2EA8FF</color>
+    <color name="status_seeding">#3DFFB5</color>
+    <color name="status_paused">#555555</color>
+    <color name="status_error">#FF4D5E</color>
+
+    <!-- Speed indicator colors -->
+    <color name="speed_download">#2EA8FF</color>
+    <color name="speed_upload">#3DFFB5</color>
 </resources>

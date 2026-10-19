@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NeoPop 3D filled button — neon yellow with dark bottom/right edge -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bottom shadow edge (3D depth) -->
+    <item android:top="4dp" android:left="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#999900"/>
+            <corners android:radius="0dp"/>
+        </shape>
+    </item>
+    <!-- Main button face -->
+    <item android:bottom="4dp" android:right="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/neon_yellow"/>
+            <corners android:radius="0dp"/>
+        </shape>
+    </item>
+</layer-list>
+

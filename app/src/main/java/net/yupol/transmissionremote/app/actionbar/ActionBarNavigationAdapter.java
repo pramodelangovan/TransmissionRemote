@@ -29,14 +29,12 @@ public class ActionBarNavigationAdapter extends BaseAdapter {
     private final int textColorPrimary;
     private final int accentColor;
     private final int alternativeAccentColor;
-    private final int textColorPrimaryInverse;
 
     public ActionBarNavigationAdapter(Context context) {
         this.context = context;
         app = (TransmissionRemote) context.getApplicationContext();
 
         textColorPrimary = ColorUtils.resolveColor(context, android.R.attr.textColorPrimary, R.color.text_primary);
-        textColorPrimaryInverse = ColorUtils.resolveColor(context, android.R.attr.textColorPrimaryInverse, R.color.text_primary_inverse);
         accentColor = ColorUtils.resolveColor(context, R.attr.colorAccent, R.color.accent);
         alternativeAccentColor = context.getResources().getColor(R.color.alternative_accent);
     }
@@ -145,14 +143,14 @@ public class ActionBarNavigationAdapter extends BaseAdapter {
         TextView serverName = view.findViewById(R.id.server_name);
         Server activeServer = app.getActiveServer();
         serverName.setText(activeServer != null ? activeServer.getName() : "");
-        serverName.setTextColor(textColorPrimaryInverse);
+        serverName.setTextColor(textColorPrimary);
 
         Filter activeFilter = app.getActiveFilter();
 
         TextView filterName = view.findViewById(R.id.filter_name);
         filterName.setText(activeFilter.getNameResId());
 
-        filterName.setTextColor(activeFilter.equals(Filters.ALL) ? textColorPrimaryInverse : alternativeAccentColor);
+        filterName.setTextColor(activeFilter.equals(Filters.ALL) ? textColorPrimary : alternativeAccentColor);
 
         return view;
     }
